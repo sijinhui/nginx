@@ -3,5 +3,10 @@ COPY site /usr/share/nginx/html
 ADD web/* /etc/nginx/conf.d/
 COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 20001
-EXPOSE 20002
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENV DOCKER_PROXY_SERVER_NAME=localhost
+ENV JSD_PROXY_SERVER_NAME=localhost
+
+ENTRYPOINT ["/entrypoint.sh"]
