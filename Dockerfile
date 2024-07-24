@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:latest
 
 # 禁用 IPv6
 RUN echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf \
