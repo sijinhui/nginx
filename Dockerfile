@@ -5,8 +5,8 @@ RUN echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf \
     && echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf \
     && echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 
-# 重新加载 sysctl 配置
-RUN sysctl -p
+## 重新加载 sysctl 配置
+#RUN sysctl -p
 
 
 COPY site /usr/share/nginx/html
