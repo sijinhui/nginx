@@ -18,3 +18,4 @@ ENV JSD_PROXY_SERVER_NAME=localhost
 ENV JEMINI_PROXY_SERVER_NAME=localhost
 
 ENTRYPOINT ["/entrypoint.sh"]
+
