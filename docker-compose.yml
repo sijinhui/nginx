@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - DOCKER_PROXY_SERVER_NAME=localhost
+      - JSD_PROXY_SERVER_NAME=localhost
+      - JEMINI_PROXY_SERVER_NAME=localhost
+
+
+
